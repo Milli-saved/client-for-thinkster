@@ -1,32 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Loader from "./Globals/Loader";
+import React from "react";
+import PostsList from "./features/posts/PostsList";
+import AddPostForm from "./features/posts/AddPostForm";
 
 const App = () => {
-  const handleClicker = () => {
-    console.log("clicked");
-  };
-  const name = "Fanuel H.";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Loader />
-        <button onClick={handleClicker}>Hellow</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>{name}</p>
-      </header>
-    </div>
+    <main className="App">
+      <AddPostForm />
+      <PostsList />
+    </main>
   );
 };
 
